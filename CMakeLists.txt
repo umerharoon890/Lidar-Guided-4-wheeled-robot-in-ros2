@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-project(my_bot)
+project(my_robot)
 
 # Default to C99
 if(NOT CMAKE_C_STANDARD)
@@ -37,4 +37,10 @@ install(
   DESTINATION share/${PROJECT_NAME}
 )
 
+# Install Python scripts
+install(PROGRAMS
+  scripts/twist_to_stamped.py
+  DESTINATION lib/${PROJECT_NAME}
+)
 ament_package()
+
